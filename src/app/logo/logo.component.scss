@@ -1,0 +1,22 @@
+@import "../../styles.scss";
+#logo-component{
+    position: relative;
+    #logo-design{
+        height: 20vh;
+        #background{
+            height: 80%;
+            background-color: $yellow-color;
+        }
+    }
+    #logo-text{
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        bottom: 5px;
+        font-size: 2rem;
+        h1{
+            line-height: 0.9;
+        }
+        
+    }
+}

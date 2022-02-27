@@ -1,0 +1,21 @@
+<app-social></app-social>
+<app-logo></app-logo>
+<div class="container">
+    <div id="login-component">
+        <p class="font-popping description">One login to manage all apps</p>
+        <form action="#" id="login-form" [formGroup]="loginForm" (ngSubmit)="onLogin()">
+            <input type="text" formControlName="username" placeholder="Username" required><br>
+            <input type="password" formControlName="password" placeholder="Password" required><br><br>
+            <button class="font-popping">LOGIN</button>
+            <p style="text-align: end;"><a class="link font-popping" href="#">Forgot Password?</a></p>
+        </form>
+        <hr><br><br>
+        <p class="font-popping text-red">Don't have an account yet?</p>
+        <form action="#" id="register-form" [formGroup]="registerForm" (ngSubmit)="onRegister()">
+            <input type="text" formControlName="username" placeholder="Username" required><br>
+            <input type="email" formControlName="email" placeholder="Email" required><br>
+            <input type="password" formControlName="password" placeholder="Password" required><br><br>
+            <button class="font-popping">REGISTER</button>
+        </form>
+    </div>
+</div>

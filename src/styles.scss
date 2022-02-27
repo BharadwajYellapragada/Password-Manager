@@ -1,1 +1,85 @@
 /* You can add global styles to this file, and also import other style files */
+$blue-color: #0065FF;
+$yellow-color:#FFD60D;
+$red-color:#ED244E;
+$dark-color:#011837;
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+html,body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1,h2,h3,h4,h5,h6,p{
+    margin: 0;
+    padding: 0;
+}
+.text-red{
+    color: $red-color;
+}
+.link{
+    font-weight: 700;
+    text-decoration: none;
+}
+.font-popping{
+    font-family: 'Poppins', sans-serif;
+}
+.container{
+    margin: 0 20%;
+}
+.grid {
+    display: grid;
+    grid-gap: 20px;
+}
+.card{
+    border-radius: 10px;
+    img{
+        width: 100%;
+        border-radius: 10px;
+    }
+}
+.card-hover{
+    &:hover {
+        transition: all 0.2s ease-out;
+        box-shadow: 0px 14px 18px rgba(38, 38, 38, 0.2);
+        top: -4px;
+        border: 1px solid #cccccc;
+        background-color: white;
+      }
+      &:before {
+        content: "";
+        // position: absolute;
+        z-index: -1;
+        top: -16px;
+        right: -16px;
+        background: #00838d;
+        height: 32px;
+        width: 32px;
+        border-radius: 32px;
+        transform: scale(2);
+        transform-origin: 50% 50%;
+        transition: transform 0.15s ease-out;
+      }
+    
+      &:hover:before {
+        transform: scale(2.15);
+      }
+}
+.span-col-2{
+    grid-column: span 2 / auto;
+}
+.section{
+    min-height: 50vh;
+    hr{
+        width: 5%;
+        margin-left: 0;
+        border: 1px solid rgba(0,0,0,0.1);
+    }
+}
+@media only screen and (max-width: 1200px) {
+    .container{
+        margin: 0 5%;
+    }
+}
